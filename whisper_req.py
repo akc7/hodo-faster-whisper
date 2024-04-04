@@ -21,7 +21,7 @@ import MeCab
 logging.basicConfig(filename='/home/akashi/faster-whisper/log/whisper_req_ope.log', level=logging.INFO)
 DEEPL_API_URL = "https://api.deepl.com/v2/translate"
 API_KEY = "api-key"
-
+ 
 # DB接続設定
 try:
     conn = psycopg2.connect(

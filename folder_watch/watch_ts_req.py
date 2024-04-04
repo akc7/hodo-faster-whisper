@@ -15,7 +15,7 @@ db_params = {
     "password":"****",
     "host":"localhost"
 }
-
+ 
 while True:
     try:
         conn = psycopg2.connect(**db_params)
