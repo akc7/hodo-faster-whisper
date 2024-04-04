@@ -20,14 +20,14 @@ import MeCab
 # ログ設定
 logging.basicConfig(filename='/home/akashi/faster-whisper/log/whisper_req_ope.log', level=logging.INFO)
 DEEPL_API_URL = "https://api.deepl.com/v2/translate"
-API_KEY = "dc0083f5-e688-d965-34a4-3eeaa29789fb"
+API_KEY = "api-key"
 
 # DB接続設定
 try:
     conn = psycopg2.connect(
         dbname="whisper",
         user="postgres",
-        password="hodo1548",
+        password="****",
         host="localhost"
     )
     cur = conn.cursor()
@@ -113,7 +113,7 @@ def insert_and_commit(record, segments, start_tc_seconds):
     local_conn = psycopg2.connect(
         dbname="whisper",
         user="postgres",
-        password="hodo1548",
+        password="****",
         host="localhost"
     )
     local_cur = local_conn.cursor()
@@ -141,7 +141,7 @@ def sendmail(subject, body, mail_to):
     msg["To"] = mail_to
     msg.attach(MIMEText(body, "html"))
 
-    s = smtplib.SMTP("email.tv-asahi.co.jp", 25,timeout=10)
+    s = smtplib.SMTP("fuga", 25,timeout=10)
     s.starttls()
     s.sendmail(gmail_account, mail_to, msg.as_string())
     s.quit()
@@ -266,7 +266,7 @@ while True:
         conn = psycopg2.connect(
             dbname="whisper",
             user="postgres",
-            password="hodo1548",
+            password="****",
             host="localhost"
         )
         cur = conn.cursor()
@@ -287,7 +287,7 @@ while True:
                     conn = psycopg2.connect(
                         dbname="whisper",
                         user="postgres",
-                        password="hodo1548",
+                        password="****",
                         host="localhost"
                     )
                     cur = conn.cursor()
@@ -331,7 +331,7 @@ while True:
                     conn = psycopg2.connect(
                         dbname="whisper",
                         user="postgres",
-                        password="hodo1548",
+                        password="****",
                         host="localhost"
                     )
                     cur = conn.cursor()
@@ -482,7 +482,7 @@ while True:
         # conn = psycopg2.connect(
         #     dbname="whisper",
         #     user="postgres",
-        #     password="hodo1548",
+        #     password="****",
         #     host="localhost"
         # )
         # cur = conn.cursor()

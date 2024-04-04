@@ -12,7 +12,7 @@ logging.getLogger('smbprotocol').setLevel(logging.WARNING)
 db_params = {
     "dbname":"whisper",
     "user":"postgres",
-    "password":"hodo1548",
+    "password":"****",
     "host":"localhost"
 }
 
@@ -30,7 +30,7 @@ while True:
             file_code = record[2]
 
             # Define SMB connection and path based on watch_date and file_code
-            smb_conn = SMBConnection("proxy", "pwd_p!1", "etc02958", "10.208.69.22", use_ntlm_v2=True)
+            smb_conn = SMBConnection("proxy", "hoge", "etc02958", "10.208.69.22", use_ntlm_v2=True)
             smb_conn.connect("10.208.69.22", 139)
             remote_dir = f"/news/{watch_date[:6]}/{watch_date[-4:]}/"
             local_dir = "/home/akashi/faster-whisper/tmp_req/"

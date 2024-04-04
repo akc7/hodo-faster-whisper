@@ -17,7 +17,7 @@ logging.getLogger("werkzeug").setLevel(logging.WARNING)
 db_params = {
     "dbname":"whisper",
     "user":"postgres",
-    "password":"hodo1548",
+    "password":"****",
     "host":"localhost"
 }
 
@@ -154,7 +154,7 @@ def check_file_exists():
         if existing_record:
             return jsonify({"exists": True})
         else:
-            smb_conn = SMBConnection("proxy", "pwd_p!1", "etc02958", "10.208.69.22", use_ntlm_v2=True)
+            smb_conn = SMBConnection("proxy", "hoge", "etc02958", "10.208.69.22", use_ntlm_v2=True)
             smb_conn.connect("10.208.69.22", 139)
             remote_dir = f"/news/{watch_date[:6]}/{watch_date[-4:]}/"
             files = smb_conn.listPath('proxy', remote_dir)  # replace 'share_name' with the appropriate share name
