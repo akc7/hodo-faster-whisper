@@ -1,21 +1,20 @@
 # ①view/*
-<br>
 フロントアプリ(vue)
 
-# ②flask/whisper_api_request.py<br>
-バックエンドAPI
+# ②flask/whisper_api_request.py
+API(flask)
 <br>
-ー指定IDの低レゾTSファイルをDL・DB(request_operation_listテーブル)登録API<br>
+ー指定IDの低レゾTSファイルをDL・PostgreSQL(request_operation_listテーブル)登録API<br>
 ー映像ファイルが存在するかチェックAPI<br>
 ー結果送信先のメールアドレス追加API<br>
 ー処理中のファイルの残時間取得API<br>
 
 # ③folder_watch/watch_ts_req.py
-<br>
-DB登録されたIDの低レゾTSファイルをDL・DB更新<br>
+バックエンド常時起動アプリ１
+ーDB登録されたIDの低レゾTSファイルをDL・DB更新<br>
 
 # ④whisper_req.py
-<br>
+バックエンド常時起動アプリ２
 ーTSファイルをfaster-whisperにより文字起こし<br>
 ーTSファイルからスタートタイムコードを取得<br>
 ー文字起こし結果と各タイムコードをrequest_operation_listテーブルのIDと紐づいた、
