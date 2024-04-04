@@ -10,11 +10,11 @@ API(flask)
 ー処理中のファイルの残時間取得API<br>
 
 # ③folder_watch/watch_ts_req.py
-バックエンド常時起動アプリ１
+バックエンド常時起動アプリ１<br>
 ーDB登録されたIDの低レゾTSファイルをDL・DB更新<br>
 
 # ④whisper_req.py
-バックエンド常時起動アプリ２
+バックエンド常時起動アプリ２<br>
 ーTSファイルをfaster-whisperにより文字起こし<br>
 ーTSファイルからスタートタイムコードを取得<br>
 ー文字起こし結果と各タイムコードをrequest_operation_listテーブルのIDと紐づいた、
